@@ -25,7 +25,6 @@ function setIframe(checkout) {
     iframe.setAttribute("width", window.innerWidth)
     iframe.setAttribute("width", window.innerWidth)
     iframe.setAttribute("height", window.innerHeight)
-//     document.getElementById("button-pay").style.display = "none";
     document.body.appendChild(iframe);
 }
 
