@@ -33,3 +33,5 @@ function removeIframe(iframe) {
     document.body.removeChild(iframe);
     document.getElementById("button-pay").style.display = "block";
 }
+
+window.createCheckout = createCheckout
