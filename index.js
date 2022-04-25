@@ -24,7 +24,7 @@ function setIframe(checkout) {
     iframe.src = url
     iframe.setAttribute("allowtransparency", "true"),
     iframe.allow="clipboard-read; clipboard-write *"
-    iframe.style.cssText = "z-index: 999999999999999;background: transparent;border: 0px none transparent;overflow-x: hidden;overflow-y: hidden;margin: 0;padding: 0;-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;position: fixed;left: 0;top: 0;width: 100%;height: 100%;visibility:hidden;"
+    iframe.style.cssText = "z-index: 999999999999999;background: transparent;border: 0px none transparent;overflow-x: hidden;overflow-y: hidden;margin: 0;padding: 0;-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;position: fixed;left: 0;top: 0;width: 100%;height: 100%;"
     document.body.appendChild(iframe);
 }
 
