@@ -22,7 +22,7 @@ function setIframe(checkout) {
     iframe = document.createElement("iframe")
     url = "http://localhost:8080/" + checkout.id
     iframe.src = url
-    setAttribute("allowtransparency", "true"),
+    iframe.setAttribute("allowtransparency", "true"),
     iframe.allow="clipboard-read; clipboard-write *"
     iframe.style.cssText = "z-index: 999999999999999;background: transparent;border: 0px none transparent;overflow-x: hidden;overflow-y: hidden;margin: 0;padding: 0;-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;position: fixed;left: 0;top: 0;width: 100%;height: 100%;visibility:hidden;"
     document.body.appendChild(iframe);
