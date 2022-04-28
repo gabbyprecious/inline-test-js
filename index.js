@@ -40,8 +40,7 @@ function createLoaderIframe() {
 function setIframe(checkout) {
   checkoutData = checkout;
   iframe = document.createElement("iframe")
-  // url = "https://staging-popup.flowertop.xyz/" + checkout.id
-  url = "http://localhost:8080/" + checkout.id
+  url = "https://staging-popup.flowertop.xyz/" + checkout.id
   iframe.src = url
   iframe.setAttribute("allowtransparency", "true"),
   iframe.setAttribute("id", "checkout"),
@@ -75,3 +74,4 @@ window.callSuccessUrl = callSuccessUrl
 window.createCheckout = createCheckout
 
 window.checkoutData = checkoutData
+
