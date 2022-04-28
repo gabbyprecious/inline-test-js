@@ -40,7 +40,8 @@ function createLoaderIframe() {
 function setIframe(checkout) {
   checkoutData = checkout;
   iframe = document.createElement("iframe")
-  url = "https://staging-popup.flowertop.xyz/" + checkout.id
+  // url = "https://staging-popup.flowertop.xyz/" + checkout.id
+  url = "http://localhost:8080/" + checkout.id
   iframe.src = url
   iframe.setAttribute("allowtransparency", "true"),
   iframe.setAttribute("id", "checkout"),
@@ -62,7 +63,10 @@ window.onmessage = function (e) {
     removeIframe('checkout');
   }
   if (e.data == 'paid') {
-    window.callSuccessUrl();
+    setTimeout(() => {
+      window.callSuccessUrl();
+    }, 10000);
+    
   }
 }
 
