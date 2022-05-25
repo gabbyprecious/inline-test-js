@@ -1,7 +1,7 @@
 var checkoutData = null;
 
 function getUrlBase(environment) {
-  return environment == "production" ? "https://api.bitnob.co/" : "https://staging-api.flowertop.xyz/";
+  return environment == "sandbox" ? "https://sandboxapi.bitnob.co/" : "https://staging-api.flowertop.xyz/";
 }
 
 function buildUrl(urlBase, data){
@@ -87,11 +87,11 @@ function createLoaderIframe() {
 function setIframe(checkout, environment) {
   checkoutData = checkout;
   iframe = document.createElement("iframe");
-  if (environment == "sandbox") {
+  if (environment == "staging") {
     url = "https://staging-popup.flowertop.xyz/" + checkoutData.id;
   }
-  if (environment == "production") {
-    url = "https://popup.bitnob.co/" + checkoutData.id;
+  if (environment == "sandbox") {
+    url = "https://sandbox-popup.bitnob.co/" + checkoutData.id;
   }
   iframe.src = url;
   iframe.setAttribute("allowtransparency", "true"),
